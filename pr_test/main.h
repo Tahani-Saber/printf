@@ -2,13 +2,28 @@
 #define MAIN_H
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
 
-int _putchar(char c);
-int _str_len(char *s);
-int _print_str(va_list args);
-int _print_char(va_list args);
-void _print_symbol(char *format, ...);
+int _putchar(char);
+int _strlen(char *);
+int print_str(va_list);
+int print_char(va_list);
+int print_100symbol(va_list);
+int _printf(const char * const format, ...);
+int (*get_op_func(char))(va_list);
 
-#endif
+/**
+ * struct op - Struct op
+ *
+ * @op: the specifier
+ * @func: the function associated
+ */
+typedef struct op
+{
+	char *op;
+	int (*func)(va_list);
+} op_t;
+
+#endif /* MAIN_H */

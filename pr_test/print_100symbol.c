@@ -1,20 +1,13 @@
 #include "main.h"
 
 /**
- * _print_symbol - function to print symbol
- * @format: the fixed argument of the function
+ * print_100symbol - function to print symbol
+ *
+ * @symbol: the fixed argument of the function
  *
  * Return: nothing
  */
-
-void _print_symbol(char *format, ...)
+int print_100symbol(__attribute__((unused)) va_list symbol)
 {
-	int s_count;
-	va_list args;
-	va_start(args, format)
-
-	case '%':
-		s_count += _print_char('%');
-	break;
-	va_end(args);
+	return (_putchar('%'));
 }
