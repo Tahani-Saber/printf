@@ -7,7 +7,7 @@
  *
  * Return: num of chars printed.
  */
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	int n_printed_chars = 0, index = 0, func_printed_chars = 0;
 	va_list args;
