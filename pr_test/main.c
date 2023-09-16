@@ -7,29 +7,41 @@
  */
 int main(void)
 {
-	_printf(NULL);
+	int n;
+
 	printf(NULL);
+	n = _printf(NULL);
+
+	printf("NULL len: %d\n", n);
 
 /*******************************************/
 
-	_printf("STRING\n");
-	printf("STRING\n");
+	printf("\nSTRING\n%n", &n);
+	printf("STRING len: %d\n", n - 1);
+	n = _printf("STRING\n");
 
+	printf("STRING len: %d\n", n);
 /*******************************************/
 
-	_printf("formated string: %s", "abdelrahman\n");
-	printf("formated string: %s", "abdelrahman\n");
+	printf("\nformated string: %s\n%n", "abdelrahman", &n);
+	printf("formated string len: %d\n", n - 1);
+	n = _printf("formated string: %s\n", "abdelrahman");
 
+	printf("formated string len: %d\n", n);
 /*******************************************/
 
-	_printf("char: %c\n", 'c');
-	printf("char: %c\n", 'c');
+	printf("\nchar: %c\n%n", 'c', &n);
+	printf("char len: %d\n", n - 1);
+	n = _printf("char: %c\n", 'c');
 
+	printf("char len: %d\n", n);
 /*******************************************/
 
-	_printf("test %% symbol\n");
-	printf("test %% symbol\n");
+	printf("\ntest %% symbol\n%n", &n);
+	printf("symbol len: %d\n", n - 1);
+	n = _printf("test %% symbol\n");
 
+	printf("symbol len: %d\n", n);
 /*******************************************/
 
 
