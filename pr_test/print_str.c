@@ -14,7 +14,7 @@ int _print_str(va_list args)
 
 	if (str == NULL)
 		str = "(null)";
-	s_count = strln(str);
+	s_count = _str_len(str);
 	while (*str)
 		s_count += _putchar(*str++);
 	return (s_count);
