@@ -9,6 +9,6 @@ int _putchar(char c);
 int _strlen(char *s);
 int _print_str(va_list args);
 int _print_char(va_list args);
-
+void _print_symbol(char *format, ...);
 
 #endif
