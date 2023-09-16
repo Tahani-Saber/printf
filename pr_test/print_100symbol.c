@@ -9,8 +9,9 @@
 
 void _print_symbol(char *format, ...)
 {
+	int s_count;
 	va_list args;
-	va_start(args, format);
+	va_start(args, format)
 
 	case '%':
 		s_count += _print_char('%');
