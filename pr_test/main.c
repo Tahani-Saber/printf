@@ -23,9 +23,9 @@ int main(void)
 	printf("STRING len: %d\n", n);
 /*******************************************/
 
-	printf("\nformated string: %s\n%n", "abdelrahman", &n);
+	printf("\nformated string: %s\n%n", "hello, World!", &n);
 	printf("formated string len: %d\n", n - 1);
-	n = _printf("formated string: %s\n", "abdelrahman");
+	n = _printf("formated string: %R\n", "hello, World!");
 
 	printf("formated string len: %d\n", n);
 /*******************************************/

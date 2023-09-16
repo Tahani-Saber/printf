@@ -13,6 +13,8 @@ int print_char(va_list);
 int print_100symbol(va_list);
 int _printf(const char *format, ...);
 int (*get_op_func(char))(va_list);
+int print_rev(va_list);
+int print_rot13(va_list);
 
 /**
  * struct op - Struct op
