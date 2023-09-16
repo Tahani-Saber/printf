@@ -7,6 +7,31 @@
  */
 int main(void)
 {
-	printf("hello-%s, %i <<\n", "test", 55, 88);
+	_printf(NULL);
+	printf(NULL);
+
+/*******************************************/
+
+	_printf("STRING\n");
+	printf("STRING\n");
+
+/*******************************************/
+
+	_printf("formated string: %s", "abdelrahman\n");
+	printf("formated string: %s", "abdelrahman\n");
+
+/*******************************************/
+
+	_printf("char: %c\n", 'c');
+	printf("char: %c\n", 'c');
+
+/*******************************************/
+
+	_printf("test %% symbol\n");
+	printf("test %% symbol\n");
+
+/*******************************************/
+
+
 	return (0);
 }
