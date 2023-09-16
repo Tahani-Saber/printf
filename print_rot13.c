@@ -14,8 +14,8 @@ int print_rot13(va_list arg)
 	int size = sizeof(rot13) / sizeof(*rot13);
 	int index = 0;
 	int forIndex;
-
 	char *string = va_arg(arg, char *);
+
 	if (string == NULL)
 		string = "(null)";
 
