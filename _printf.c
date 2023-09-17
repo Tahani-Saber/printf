@@ -29,11 +29,16 @@ int _printf(const char *format, ...)
 			break;
 
 		index++;
-		if (get_op_func(format[index]))
+		op_func = get_op_func(format[index]);
+		if (op_func)
 		{
-			op_func = get_op_func(format[index]);
 			func_printed_chars = op_func(args);
 			n_printed_chars += func_printed_chars;
+			index++;
+		}
+		else if (op_func == NULL)
+		{
+			n_printed_chars += _putchar('%');
 			index++;
 		}
 	}
