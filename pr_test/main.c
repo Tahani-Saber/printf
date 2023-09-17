@@ -15,9 +15,9 @@ int main(void)
 	printf("_printf return: %i\n", _printf("char: %c% %c %c", 'c', 'M', 'S'));
 */
 
-	printf("printf return: %i\n", printf("char: %i\t-\t", 555533));
+	printf("printf return: %i\n", printf("char: %i\t-\t", -555533));
 
-	printf("_printf return: %i\n", _printf("char: %i\t-\t", 555533));
+	printf("_printf return: %i\n", _printf("char: %i\t-\t", -555533));
 /*******************************************/
 
 	return (0);

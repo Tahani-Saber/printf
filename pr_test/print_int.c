@@ -42,17 +42,20 @@ int print_recursive(unsigned int n)
  */
 int print_int(va_list arg)
 {
+	int len = 0;
 	int num = va_arg(arg, int);
 
 	if (num < 0)
 	{
 		_putchar('-');
 		num = -1 * num;
+		len++;
 	}
 	else if (num == 0)
 	{
 		print_digit(0);
 		return (1);
 	}
-	return (print_recursive(num));
+	len += print_recursive(num);
+	return (len);
 }
