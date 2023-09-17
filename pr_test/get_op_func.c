@@ -16,6 +16,8 @@ int (*get_op_func(char specifier))(va_list)
 		{"%", print_100symbol},
 		{"r", print_rev},
 		{"R", print_rot13},
+		{"d", print_int},
+		{"i", print_int},
 		{NULL, NULL}
 	};
 	int index;

@@ -10,25 +10,14 @@ int main(void)
 
 /*******************************************/
 
-	printf("_printf return: %i\n", printf("helloa%z %"));
+/*	printf("printf return: %i\n", printf("char: %c% %c %c", 'c', 'M', 'S'));
 
-	printf("_printf return: %i\n", _printf("helloa%z %"));
+	printf("_printf return: %i\n", _printf("char: %c% %c %c", 'c', 'M', 'S'));
+*/
 
-	printf("printf return: %i\n", printf("world%z %s", "ddd"));
+	printf("printf return: %i\n", printf("char: %i\t-\t", 555533));
 
-	printf("printf return: %i\n", printf("world % dwtest"));
-
-	printf("printf return: %i\n", _printf("world % dwtest"));
-
-	printf("printf return: %i\n", printf("world %"));
-
-	printf("printf return: %i\n", _printf("world %"));
-/*******************************************/
-
-	_printf("char: %c\n", "cs");
-
-	printf("char: %c\n", "cs");
-
+	printf("_printf return: %i\n", _printf("char: %i\t-\t", 555533));
 /*******************************************/
 
 	return (0);
