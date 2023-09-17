@@ -26,7 +26,10 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		if (format[index + 1] == '\0')
-			break;
+		{
+			va_end(args);
+			return (-1);
+		}
 
 		index++;
 		op_func = get_op_func(format[index]);
@@ -39,7 +42,6 @@ int _printf(const char *format, ...)
 		else if (op_func == NULL)
 		{
 			n_printed_chars += _putchar('%');
-			index++;
 		}
 	}
 	va_end(args);
