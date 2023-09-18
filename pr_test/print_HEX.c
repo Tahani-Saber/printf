@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_bin - prints binary version of a number.
+ * print_HEX - prints hex version of a number in uppercase.
  *
  * @arg: number to be processed.
  *
  * Return: number of chars printed.
  */
-int print_bin(va_list arg)
+int print_HEX(va_list arg)
 {
 	unsigned int num = va_arg(arg, unsigned int);
 
@@ -16,5 +16,5 @@ int print_bin(va_list arg)
 		_putchar('0');
 		return (1);
 	}
-	return (convert(num, 2, 0));
+	return (convert(num, 16, 1));
 }

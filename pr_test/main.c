@@ -8,18 +8,16 @@
  */
 int main(void)
 {
+	int printf_return, _printf_return;
 
-/*******************************************/
+	/* printf_return => the number of characters which printf printed */
+	printf_return = printf("formated int: %i\t-\t", 567891);
+	printf("printf return: %i\n", printf_return);
 
-/*	printf("printf return: %i\n", printf("char: %c% %c %c", 'c', 'M', 'S'));
 
-	printf("_printf return: %i\n", _printf("char: %c% %c %c", 'c', 'M', 'S'));
-*/
-
-	printf("printf return: %i\n", printf("char: %i\t-\t", INT_MIN));
-
-	printf("_printf return: %i\n", _printf("char: %i\t-\t", INT_MIN));
-/*******************************************/
+	/* _printf_return => the number of characters which _printf printed */
+	_printf_return = _printf("formated int: %i\t-\t", 567891);
+	printf("_printf return: %i\n", _printf_return);
 
 	return (0);
 }

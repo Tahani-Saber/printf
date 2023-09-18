@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * print_int - print numbers that more than 1 digit.
+ * print_uint - print unsigned numbers that more than 1 digit.
  *
  * @arg: number to be processed.
  *
  * Return: number of printed chars.
  */
-int print_int(va_list arg)
+int print_uint(va_list arg)
 {
-	int len = 0, last, index, digit, negative = 0, base = 1;
+	int len = 0, last, index, digit, base = 1;
 	int tempi;
-	int num = va_arg(arg, int);
+	unsigned int num = va_arg(arg, unsigned int);
 
 	if (num == 0)
 	{
@@ -19,16 +19,7 @@ int print_int(va_list arg)
 		return (1);
 	}
 
-	if (num < 0)
-	{
-		_putchar('-');
-		last = num % 10;
-		last = last * -1;
-		num = -1 * (num + 1);
-		negative = 1;
-	}
-
-	last = negative == 1 ? last : num % 10;
+	last = num % 10;
 
 	len = num_of_digits(num);
 	if (len > 1)
@@ -48,5 +39,5 @@ int print_int(va_list arg)
 	}
 
 	_putchar(last + '0');
-	return (len + negative);
+	return (len);
 }
