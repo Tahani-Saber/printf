@@ -1,36 +1,22 @@
 #include "main.h"
 
 /**
- * print_digit - print single digit.
+ * num_of_digits - calculate the number of a number's digits.
  *
- * @n: digit to be printed.
+ * @num: number to be processed.
  *
- * Return: Nothing.
+ * Return: num of the digits
  */
-int print_digit(int n)
+int num_of_digits(unsigned int num)
 {
-	_putchar(n + '0');
-	return (1);
-}
+	int len = 0;
 
-/**
- * print_recursive - Recursive function to print the entire number.
- *
- * @n: number to be processed.
- *
- * Return: Nothing
- */
-int print_recursive(unsigned int n)
-{
-	static int count = 0;
-
-	if (n == 0)
+	while (num / 10 != 0)
 	{
-		return (0);
+		num = num / 10;
+		len++;
 	}
-
-	print_recursive(n / 10);
-	return count += print_digit(n % 10);
+	return (len + 1);
 }
 
 /**
@@ -42,20 +28,44 @@ int print_recursive(unsigned int n)
  */
 int print_int(va_list arg)
 {
-	int len = 0;
+	int len = 0, last, index, digit, negative = 0, base = 1;
+	int tempi;
 	int num = va_arg(arg, int);
+
+	if (num == 0)
+	{
+		_putchar(0 + '0');
+		return (1);
+	}
 
 	if (num < 0)
 	{
 		_putchar('-');
-		num = -1 * num;
-		len++;
+		last = num % 10;
+		last = last * -1;
+		num = -1 * (num + 1);
+		negative = 1;
 	}
-	else if (num == 0)
+
+	last = negative == 1 ? last : num % 10;
+
+	len = num_of_digits(num);
+	if (len > 1)
 	{
-		print_digit(0);
-		return (1);
+		for (index = 1; index < len; index++)
+		{
+			for (tempi = len - index; tempi != 0; tempi--)
+			{
+				base = base * 10;
+			}
+
+			digit = num / (base);
+			digit = digit % 10;
+			_putchar(digit + '0');
+			base = 1;
+		}
 	}
-	len += print_recursive(num);
-	return (len);
+
+	_putchar(last + '0');
+	return (len + negative);
 }
