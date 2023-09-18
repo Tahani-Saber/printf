@@ -16,7 +16,7 @@ int _printf(const char *format, ...);
 int (*get_op_func(char))(va_list);
 int print_rev(va_list);
 int print_rot13(va_list);
-char* to_binary(unsigned int n);
+char *to_binary(unsigned int n);
 int print_int(va_list);
 
 /**

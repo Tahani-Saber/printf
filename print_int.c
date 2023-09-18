@@ -20,11 +20,11 @@ int num_of_digits(unsigned int num)
 }
 
 /**
- * print_number - print numbers that more than 1 digit.
+ * print_int - print numbers that more than 1 digit.
  *
- * @n: number to be processed.
+ * @arg: number to be processed.
  *
- * Return: Nothing.
+ * Return: number of printed chars.
  */
 int print_int(va_list arg)
 {
