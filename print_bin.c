@@ -1,37 +1,20 @@
 #include "main.h"
 
 /**
- * to_binary - convert unsigned int to binary
- * @n: the int to be converted
+ * print_bin - prints binary version of a number.
  *
- * Return: binary as str
+ * @arg: number to be processed.
+ *
+ * Return: number of chars printed.
  */
-
-char *to_binary(unsigned int n)
+int print_bin(va_list arg)
 {
-	int req_bits = 0;
-	unsigned int temp = n;
-	int index;
-	char *binary_str;
+	unsigned int num = va_arg(arg, unsigned int);
 
-	while (temp > 0)
+	if (num == 0)
 	{
-		req_bits++;
-		temp >>= 1;
+		_putchar('0');
+		return (1);
 	}
-	binary_str = (char *)malloc(req_bits);
-	if (!binary_str)
-		return (NULL);
-	memset(binary_str, '0', req_bits);
-	binary_str[req_bits] = '\0';
-	index = req_bits - 1;
-	while (n > 0)
-	{
-		if (n & 1)
-			binary_str[index] = '1';
-		n >>= 1;
-		index--;
-	}
-	free(binary_str);
-	return (binary_str);
+	return (convert(num, 2, 0));
 }

@@ -22,6 +22,7 @@ int (*get_op_func(char specifier))(va_list)
 		{"x", print_hex},
 		{"X", print_HEX},
 		{"o", print_octal},
+		{"b", print_bin},
 		{NULL, NULL}
 	};
 	int index;
