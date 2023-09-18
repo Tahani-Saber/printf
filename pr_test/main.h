@@ -7,6 +7,13 @@
 #include <stdarg.h>
 #include <string.h>
 
+#define MINUS_FLAG 1
+#define PLUS_FLAG 2
+#define ZERO_FLAG 4
+#define HASH_FLAG 8
+#define SPACE_FLAG 16
+
+
 int _putchar(char);
 int _strlen(char *);
 int print_str(va_list);
