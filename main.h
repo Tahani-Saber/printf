@@ -24,6 +24,7 @@ int print_HEX(va_list);
 int convert(unsigned int, int, int);
 int num_of_digits(unsigned int);
 int print_bin(va_list);
+int print_ptr(const char * const format, ...);
 
 /**
  * struct op - Struct op
