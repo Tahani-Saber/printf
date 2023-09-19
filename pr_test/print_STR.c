@@ -21,7 +21,7 @@ int print_STR(va_list args, flags_t *flag)
 	s_count = _strlen(str);
 	for (index = 0; str[index]; index++)
 	{
-		if ((str[index] >= 0 && str[index] < 32) || str[index] >= 127)
+		if (str[index] >= 0 && (str[index] < 32 || str[index] >= 127))
 		{
 			_putchar('\\');
 			_putchar('x');
