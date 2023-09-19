@@ -31,7 +31,6 @@ int print_STR(va_list args, flags_t *flag)
 			if (str[index] < 16)
 			{
 				_putchar('0');
-				s_count++;
 			}
 			s_count += convert((unsigned int)str[index], 16, 1);
 		}
