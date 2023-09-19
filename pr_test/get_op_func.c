@@ -24,6 +24,7 @@ int (*get_op_func(char specifier))(va_list, flags_t *)
 		{"o", print_octal},
 		{"b", print_bin},
 		{"S", print_STR},
+		{"p", print_ptr},
 		{NULL, NULL}
 	};
 	int index;
