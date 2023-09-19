@@ -31,10 +31,9 @@ int print_STR(va_list args, flags_t *flag)
 		_putchar('\\');
 		_putchar('x');
 		if (str[index] < 16)
-			_putchar('0'), s_count++;
+			_putchar('0');
 
 		s_count += 2 + convert((unsigned int)str[index], 16, 1);
 	}
-
 	return (s_count);
 }
