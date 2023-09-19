@@ -18,7 +18,7 @@ int main(void)
 
 
 	/* _printf_return => the number of characters which _printf printed */
-	_printf_return = _printf("formated STR: %S\t-\t", "welcome\nSchool");
+	_printf_return = _printf("formated STR: %S %S\t-\t", "welcome\nSchool", "welcome\0School");
 	printf("_printf return: %i\n", _printf_return);
 
 	return (0);
