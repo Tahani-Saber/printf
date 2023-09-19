@@ -10,8 +10,8 @@
  */
 int print_int(va_list arg, flags_t *flag)
 {
-	int len = 0, last, index, negative = 0, digit, base = 1;
-	int tempi;
+	int len = 0, last, index, digit, negative = 0, base = 1;
+	int tempi, counter = 0;
 	int num = va_arg(arg, int);
 	(void) flag;
 
@@ -19,7 +19,6 @@ int print_int(va_list arg, flags_t *flag)
 		_putchar(' '), len++;
 	if (num >= 0 && flag->plus)
 		_putchar('+'), len++;
-
 	if (num == 0)
 	{
 		_putchar('0');
@@ -35,12 +34,12 @@ int print_int(va_list arg, flags_t *flag)
 	}
 
 	last = negative == 1 ? last : num % 10;
-	len += num_of_digits(num);
-	if (len > 1)
+	counter += num_of_digits(num);
+	if (counter > 1)
 	{
-		for (index = 1; index < len; index++)
+		for (index = 1; index < counter; index++)
 		{
-			for (tempi = len - index; tempi != 0; tempi--)
+			for (tempi = counter - index; tempi != 0; tempi--)
 				base = base * 10;
 
 			digit = num / (base);
@@ -50,5 +49,5 @@ int print_int(va_list arg, flags_t *flag)
 		}
 	}
 	_putchar(last + '0');
-	return (len);
+	return (len + counter);
 }
