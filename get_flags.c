@@ -11,23 +11,23 @@
  */
 int get_flags(const char *format, int index, flags_t *flags)
 {
-        int flag_found = 0;
+	int flag_found = 0;
 
-        if (format[index] == '#')
-        {
-                flags->hash = 1;
-                flag_found = 1;
-        }
-        else if (format[index] == ' ')
-        {
-                flags->space = 1;
-                flag_found = 1;
-        }
-        else if (format[index] == '+')
-        {
-                flags->plus = 1;
-                flag_found = 1;
-        }
+	if (format[index] == '#')
+	{
+			flags->hash = 1;
+			flag_found = 1;
+	}
+	else if (format[index] == ' ')
+	{
+			flags->space = 1;
+			flag_found = 1;
+	}
+	else if (format[index] == '+')
+	{
+			flags->plus = 1;
+			flag_found = 1;
+	}
 
-        return (flag_found);
+	return (flag_found);
 }
