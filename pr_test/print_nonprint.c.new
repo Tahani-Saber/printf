@@ -7,10 +7,11 @@
  * Return: number of string prints
  */
 
-int print_nonprint(va_list args)
+int print_nonprint(va_list args, flags_t *flag)
 {
 	int index1, index2 = 0;
 	char *s;
+	(void) flag;
 
 	s = va_arg(args, char *);
 	for (index1 = 0; s[index1] != '\0'; index1++)

@@ -8,7 +8,7 @@
  *
  * Return: pointer to function.
  */
-int (*get_op_func(char specifier))(va_list)
+int (*get_op_func(char specifier))(va_list, flags_t *)
 {
 	op_t ops[] = {
 		{"c", print_char},

@@ -4,14 +4,16 @@
  * print_uint - print unsigned numbers that more than 1 digit.
  *
  * @arg: number to be processed.
+ * @flag: flags to be considered in printing.
  *
  * Return: number of printed chars.
  */
-int print_uint(va_list arg)
+int print_uint(va_list arg, flags_t *flag)
 {
 	int len = 0, last, index, digit, base = 1;
 	int tempi;
 	unsigned int num = va_arg(arg, unsigned int);
+	(void) flag;
 
 	if (num == 0)
 	{
