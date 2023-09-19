@@ -2,33 +2,38 @@
 
 /**
  * print_ptr - function to print address
- * @format: allowed formats
+ * @@args: the arguments, passed to the func.
+ *@flag: flags to be considered in printing
  *
  * Return: address
  */
 
-int print_ptr(const char * const format, ...)
+int print_ptr(va_list args, flags_t *flag)
 {
-	int index, index2;
-	char *sp;
-	va_list ptr;
+	void *ptr;
+	char *str = "(nil)";
+	(void) flag;
+	unsigned long int cast;
+	int index , pr_count;
 
-	va_start(ptr, format);
-	while (format && format[index] != '\0')
+	ptr = va_arg(args, void*);
+	if (ptr == '\0')
 	{
-		while (formats[index2].type != NULL)
+		index = 0;
+		while (*str)
 		{
-			if (format[index] == *formats[index2].type)
-			{
-				_printf("%s", sp);
-				formats[index2].func(ptr);
-				sp = ", ";
-			}
-			index2++;
+			_putchar(*str);
+			str++;
+			index++;
 		}
-		index2 = 0;
-		index++;
+		return (index);
 	}
-	va_end(ptr);
-	return (ptr);
+	cast = (unsigned long int)ptr;
+
+	pr_count += _putchar('0');
+	pr_count += _putchar('x');
+	pr_count += convert(cast);
+
+	return (pr_count);
+
 }
