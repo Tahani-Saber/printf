@@ -2,8 +2,9 @@
 
 /**
  * print_ptr - function to print address
- * @@args: the arguments, passed to the func.
- *@flag: flags to be considered in printing
+ *
+ * @args: the arguments, passed to the func.
+ * @flag: flags to be considered in printing
  *
  * Return: address
  */
@@ -12,12 +13,12 @@ int print_ptr(va_list args, flags_t *flag)
 {
 	void *ptr;
 	char *str = "(nil)";
-	(void) flag;
 	unsigned long int cast;
-	int index , pr_count;
+	int index, pr_count = 0;
+	(void) flag;
 
-	ptr = va_arg(args, void*);
-	if (ptr == '\0')
+	ptr = va_arg(args, void *);
+	if (ptr == NULL)
 	{
 		index = 0;
 		while (*str)
@@ -32,8 +33,7 @@ int print_ptr(va_list args, flags_t *flag)
 
 	pr_count += _putchar('0');
 	pr_count += _putchar('x');
-	pr_count += convert(cast);
+	pr_count += convert(cast, 16, 0);
 
 	return (pr_count);
-
 }
