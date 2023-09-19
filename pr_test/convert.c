@@ -9,7 +9,7 @@
  *
  * Return: num of printed chars.
  */
-int convert(unsigned int num, int base, int upperCase)
+int convert(unsigned long int num, int base, int upperCase)
 {
 	static const char upper_hex[] = "0123456789ABCDEF";
 	static const char lower_hex[] = "0123456789abcdef";
