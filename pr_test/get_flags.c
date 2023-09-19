@@ -15,18 +15,18 @@ int get_flags(const char *format, int index, flags_t *flags)
 
 	if (format[index] == '#')
 	{
-			flags->hash = 1;
-			flag_found = 1;
+		flags->hash = 1;
+		flag_found = 1;
 	}
 	else if (format[index] == ' ')
 	{
-			flags->space = 1;
-			flag_found = 1;
+		flags->space = 1;
+		flag_found = 1;
 	}
 	else if (format[index] == '+')
 	{
-			flags->plus = 1;
-			flag_found = 1;
+		flags->plus = 1;
+		flag_found = 1;
 	}
 
 	return (flag_found);
