@@ -44,7 +44,8 @@ int print_HEX(va_list, flags_t *);
 int convert(unsigned int, int, int);
 int num_of_digits(unsigned int);
 int print_bin(va_list, flags_t *);
-int get_flags(const char *, int, flags_t *);
+int get_flags(char, flags_t *);
+int print_STR(va_list, flags_t *);
 
 /**
  * struct op - Struct op

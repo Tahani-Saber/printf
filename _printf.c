@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			return (-1);
 		}
 		index++;
-		flags_found = get_flags(format, index, &flags);
+		flags_found = get_flags(format[index], &flags);
 		if (flags_found)
 			continue;
 

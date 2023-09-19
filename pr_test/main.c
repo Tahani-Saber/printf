@@ -13,12 +13,12 @@ int main(void)
 
 
 	/* printf_return => the number of characters which printf printed */
-	printf_return = printf("formated int: % x %+x\t-\t", -567891, -234987);
+	printf_return = printf("formated STR: %s\t-\t", "welcome School");
 	printf("printf return: %i\n", printf_return);
 
 
 	/* _printf_return => the number of characters which _printf printed */
-	_printf_return = _printf("formated int: % x %+x\t-\t", -567891, -234987);
+	_printf_return = _printf("formated STR: %S\t-\t", "welcome\nSchool");
 	printf("_printf return: %i\n", _printf_return);
 
 	return (0);

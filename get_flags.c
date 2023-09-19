@@ -3,27 +3,26 @@
 /**
  * get_flags - set flags
  *
- * @format: formated string.
- * @index: index of the flag in the formated string.
+ * @flag: flag in the formated string.
  * @flags: flags' struct
  *
  * Return: 1 => flag found, otherwise 0.
  */
-int get_flags(const char *format, int index, flags_t *flags)
+int get_flags(char flag, flags_t *flags)
 {
 	int flag_found = 0;
 
-	if (format[index] == '#')
+	if (flag == '#')
 	{
 		flags->hash = 1;
 		flag_found = 1;
 	}
-	else if (format[index] == ' ')
+	else if (flag == ' ')
 	{
 		flags->space = 1;
 		flag_found = 1;
 	}
-	else if (format[index] == '+')
+	else if (flag == '+')
 	{
 		flags->plus = 1;
 		flag_found = 1;
