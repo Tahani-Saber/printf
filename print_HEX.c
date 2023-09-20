@@ -13,17 +13,18 @@ int print_HEX(va_list arg, flags_t *flag)
 	unsigned int num = va_arg(arg, unsigned int);
 	int len = 0;
 
-	if (flag->hash)
-	{
-		_putchar('0');
-		_putchar('X');
-		len = 2;
-	}
 	if (num == 0)
 	{
 		_putchar('0');
 		len++;
 		return (len);
+	}
+
+	if (flag->hash)
+	{
+		_putchar('0');
+		_putchar('X');
+		len = 2;
 	}
 	len += convert(num, 16, 1);
 	return (len);
