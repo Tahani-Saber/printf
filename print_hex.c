@@ -13,7 +13,6 @@ int print_hex(va_list arg, flags_t *flag)
 	unsigned int num = va_arg(arg, unsigned int);
 	int len = 0;
 
-	printf("u int: %u\n", num);
 	if (num == 0)
 	{
 		_putchar('0');
